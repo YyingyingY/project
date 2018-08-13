@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+li {
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+
+img {
+  display: block; }
+
+body, html {
+  height: 100%; }
+
+.left {
+  float: left; }
+
+.right {
+  float: right; }
+
+h1, h2, h3, h4, h5, h6, b, i, strong {
+  font-weight: normal; }
+
+body {
+  background: #e6e6e6; }
+
+.wrap {
+  width: 600px;
+  height: 1087px;
+  background: #fff;
+  margin: 90px auto 0;
+  padding-top: 67px;
+  box-sizing: border-box;
+  position: relative; }
+
+.wrap .content {
+  width: 480px;
+  height: 1020px;
+  margin: 0 auto; }
+
+.close {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  cursor: pointer; }
+
+.close a {
+  color: #000;
+  font-size: 24px; }
+
+.content h2 {
+  font-size: 40px;
+  color: #1428a0;
+  font-weight: bolder;
+  line-height: 40px; }
+
+.content fieldset {
+  width: 480px;
+  height: 943px;
+  border: none;
+  margin-top: 35px; }
+
+.email {
+  width: 480px;
+  height: 60px;
+  cursor: text;
+  position: relative; }
+
+.email1 {
+  width: 100%;
+  height: 35px;
+  border: none;
+  font-size: 18px;
+  border-bottom: 1px solid #dddddd;
+  outline: none; }
+
+.email2 {
+  border-bottom: 1px solid #6673c1; }
+
+.youjian {
+  position: absolute;
+  top: 3px;
+  left: 0;
+  cursor: text;
+  color: #959595; }
+
+.reme {
+  width: 100%;
+  height: 26px; }
+
+.yanzheng {
+  width: 100%;
+  height: 52px;
+  margin: 35px 0; }
+
+.yanzheng button {
+  border: none; }
+
+.pic img {
+  width: 480px;
+  height: 288px; }
+
+.dl {
+  width: 480px;
+  height: 155px; }
+
+.btn {
+  width: 180px;
+  height: 50px;
+  border: 2px solid #000;
+  border-radius: 10px;
+  margin: 64px 0 0 150px;
+  cursor: pointer; }
+
+.dlbot {
+  width: 100%;
+  height: 42px;
+  text-align: center; }
+
+.dlbot a {
+  text-decoration-line: underline; }

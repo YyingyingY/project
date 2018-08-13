@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>fangdajing</title>
+    <link rel="stylesheet" href="../style/fangdajing.css">
+</head>
+<body>
+    <div class="topwrap">
+        <ul class="top">
+            <li class="left"><a href="/" class="left">三星网上商城</a></li>
+            <li class="right"><a href="http://www.samsung.com/cn/home/" target="_blank" class="left">三星官网<i class="iconfont">&#xe70d;</i></a></li>
+        </ul>
+    </div>
+
+    <div class="navwrap  active3">
+        <div class="nav">
+            <ul class="navLeft left">
+                <li class="phone" id="phone">
+                    <a href="#">智能手机</a>
+                    
+                </li>
+                <li class="equipment"><a href="#">可穿戴设备</a></li>
+                <li class="computer"><a href="#">个人电脑</a></li>
+                <li class="clearner"><a href="#">空气净化器</a></li>
+                <li class="parts"><a href="#">配件</a></li>
+            </ul>
+            <div class="logo left"><img src="https://res.samsungshop.com.cn//images/common/new-header/logo.png?20180712193028076"></div>
+
+            <ul class="navRight left">
+                <li><a href="#"><i class="iconfont">&#xe60f;</i><span>400 071 8899</span></a></li>
+                <li><a href="#"><i class="iconfont">&#xe679;</i><span>在线客服</span></a></li>
+                <li><a href="html/login.html"><i class="iconfont">&#xe637;</i><span>登录</span></a></li>
+                <li><a href="#"><i class="iconfont">&#xe60a;</i></a></li>
+                <li><a href="#"><i class="iconfont">&#xf030e;</i></a></li>                
+            </ul>
+        </div>
+        <div class="navListPhone">
+            <ul class="navListPhone_left left" id="navListPhone_left">
+            </ul>
+            <ul class="navListPhone_right left" id="navListPhone_right">
+                <li>盖乐世 S8系列</li>
+                <li>盖乐世 Note系列</li>
+                <li>盖乐世 A系列</li>
+                <li>盖乐世 C系列</li>
+            </ul>
+        </div>
+    </div>
+    
+
+    <div class="totop" id="totop">
+        <i class="iconfont">&#xe653;</i>
+    </div>
+
+
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+        // 二级导航
+        $(document).ready(function(){
+	        getNav();
+        });
+
+        function getNav(){
+            $.ajax({//引入接口
+                url: "http://mce.meilishuo.com/jsonp/get/3?offset=0&frame=0&trace=0&limit=10&endId=0&pid=106888&_=1526369583128",
+                dataType:"jsonp"
+            })
+            .done( function (res1) {
+            // console.log(res)
+                var menu = res1.data.list;
+            //  console.log(menu)
+                for(let i=0;i<4;i++){
+                var menu_img = $("<img/>").attr("src", menu[i].image);
+                var p = $('<p>').html("价格 : "+ menu[i].price);
+                //设置图片的宽度和高度；
+                menu_img.width(100);
+                menu_img.height(100);
+                    var menu_li = $("<li>").append(menu_img,p)
+
+                    $("#navListPhone_left").append(menu_li);
+                }
+
+                for(let j = 0; j < menu.length;j ++){
+                    var menuImg = $("<img/>").attr("src",menu[j].image);
+                    var menuTit = $("<h6>").html(menu[j].title);
+                    var menPrice = $("<p>").html("¥" + menu[j].price);
+
+                menuImg.width(255);
+                menuImg.height(255);
+                    var menLi = $("<li>").append(menuImg,menuTit,menPrice);
+                    
+                    $("#mainUl").append(menLi);
+                //  console.log($("#mainUl").append(menLi))
+                    
+                    }
+                
+            })
+        }
+
+        //二级导航
+        $(".navLeft").children("li").hover(function(){
+            // console.log(1)
+            $(".navListPhone").fadeIn(300);
+        },function(){
+            // console.log(2)
+            $(".navListPhone").fadeOut(300);
+        })
+
+        //吸顶菜单
+        $(".navwrap").removeClass("active3")
+            var offsetTop = $(".navwrap").offset().top;
+            $(document).scroll(function(){
+                if($(document).scrollTop() >= offsetTop){
+                    if($(".navwrap").hasClass("active3")) return;
+                    $(".navwrap").addClass("active3");
+                }else{
+                    $(".navwrap").removeClass("active3");
+                }
+            })
+
+
+        //回到顶部
+        $("#totop").hide();
+        $(window).scroll(function(){
+            if($(window).scrollTop() > 200){
+                $("#totop").show();
+            }else{
+                $("#totop").hide();
+            }
+        })
+        $("#totop").click(function(){
+            $("html,body").animate({scrollTop:0},500);
+        })
+    </script>
+
+</body>
+</html>

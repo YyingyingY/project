@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>login测试</title>
+    <link rel="stylesheet" href="../style/login.css">
+</head>
+<body>
+    <div class="wrap">
+        <div class="content">
+            <div class="close"><a href="../index.html">×</a></div>
+            <h2>三星账户</h2>
+            <form action="">
+                <fieldset>
+                    <legend></legend>
+                    <div class="email">
+                        <label for="email1" class="youjian" id="youjian">电子邮件或手机号码</label>
+                        <input type="text" class="email1" id="email1">
+                    </div>
+                    <div class="email">
+                        <label for="pwd" class="youjian">密码</label>
+                        <input type="text" class="email1" id="pwd">
+                    </div>
+
+                    <div class="reme">
+                        <input type="checkbox"  id="remeid" class="remeid1">
+                        <label for="remeid" class="remeid2">记住我的ID</label>
+                    </div>
+
+                    <div class="yanzheng">
+                        <div class="yzImg left">
+                            <img src="../img/yzm.jpg" alt="">
+                        </div>
+                        <button class="left"><img src="../img/btn.jpg" alt=""></button>
+                    </div>
+
+                    <div class="email">
+                        <label for="code" class="youjian">安全代码</label>
+                        <input type="text" class="email1" id="code">
+                    </div>
+
+                    <div class="pic">
+                        <img src="https://account.samsung.cn/images/mobile/layout/912x547b.jpg" alt="">
+                    </div>
+
+                    <div class="dl">
+                        <button class="btn">登录</button>
+                    </div>
+                    
+                    <div class="dlbot">
+                        <p><a href="#">查找 ID 或重置密码？</a></p>
+                        或<span><a href="../html/register1.html">点此注册</a></span>
+                    </div>
+                    
+                </fieldset>
+            </form>
+        </div>
+    </div>
+
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+    $("#email1").focus(function(){
+        $(this).siblings().css({
+            color:"#6673c1",
+            "font-size":12,
+            top:-10,
+        });
+        $(this).addClass("email2");
+    })
+    $("#pwd").focus(function(){
+        $(this).siblings().css({
+            color:"#6673c1",
+            "font-size":12,
+            top:-10
+        });
+        $(this).addClass("email2");
+    })
+    $("#code").focus(function(){
+        $(this).siblings().css({
+            color:"#6673c1",
+            "font-size":12,
+            top:-10
+        });
+        $(this).addClass("email2");
+    })
+    $("#email1").blur(function(){
+        $(this).siblings().css({
+            top:3,
+            left:0,
+            color:"#959595",
+            "font-size":18
+        });
+        $(this).removeClass("email2");
+        // var sValue = $(this).val();
+        // console.log(sValue);
+        if($(this).val() != ""){
+            $(this).siblings().hide();
+        }else{
+            $(this).siblings().show();
+        }
+    })
+    $("#pwd").blur(function(){
+        $(this).siblings().css({
+            top:3,
+            left:0,
+            color:"#959595",
+            "font-size":18
+        });
+        $(this).removeClass("email2");
+        if($(this).val() != ""){
+            $(this).siblings().hide();
+        }else{
+            $(this).siblings().show();
+        }
+    })
+    $("#code").blur(function(){
+        $(this).siblings().css({
+            top:3,
+            left:0,
+            color:"#959595",
+            "font-size":18
+        });
+        $(this).removeClass("email2");
+        if($(this).val() != ""){
+            $(this).siblings().hide();
+        }else{
+            $(this).siblings().show();
+        }
+    })
+        
+    </script>
+</body>
+</html>

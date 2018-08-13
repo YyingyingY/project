@@ -1,0 +1,267 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+li {
+  list-style: none; }
+
+img {
+  display: block; }
+
+body, html {
+  height: 100%; }
+
+.left {
+  float: left; }
+
+.right {
+  float: right; }
+
+h1, h2, h3, h4, h5, h6, b, i, strong {
+  font-weight: normal; }
+
+.topWrap {
+  width: 100%;
+  height: 805px;
+  background: #f7f7f7;
+  border-bottom: 1px solid #acacac; }
+
+.top {
+  width: 702px;
+  height: 805px;
+  margin: 0 auto; }
+
+.top h3 {
+  font-size: 20px;
+  line-height: 20px;
+  padding: 53px 0 17px 0;
+  font-weight: bolder; }
+
+.topmain {
+  width: 700px;
+  height: 640px;
+  background: #ffffff;
+  border: 1px solid #ebebeb;
+  border-radius: 5px; }
+
+.main {
+  width: 580px;
+  height: 640px;
+  margin: 0 auto; }
+
+.main h4 {
+  font-size: 22px;
+  line-height: 22px;
+  font-weight: bolder;
+  padding-top: 62px; }
+
+.main p {
+  font-size: 16px;
+  line-height: 16px;
+  margin-top: 12px; }
+
+.main form .firstname {
+  width: 580px;
+  height: 80px;
+  position: relative;
+  margin-top: 15px; }
+
+.main form .firstname .usr {
+  width: 100%;
+  height: 43px;
+  border: none;
+  font-size: 18px;
+  border-bottom: 1px solid #dddddd;
+  outline: none;
+  color: #1428a0; }
+
+.main form .firstname p {
+  position: absolute;
+  top: 3px;
+  left: 0;
+  color: #767676; }
+
+.main form .firstname label {
+  font-size: 14px;
+  color: #767676;
+  position: absolute;
+  top: 50px; }
+
+.main form .name {
+  width: 580px;
+  height: 80px;
+  position: relative;
+  margin-top: 15px; }
+
+.main form .name .user {
+  width: 100%;
+  height: 43px;
+  border: none;
+  font-size: 18px;
+  border-bottom: 1px solid #dddddd;
+  outline: none;
+  color: #1428a0; }
+
+.main form .name p {
+  position: absolute;
+  top: 3px;
+  left: 0;
+  color: #767676; }
+
+.main form .name label {
+  font-size: 14px;
+  color: #767676;
+  position: absolute;
+  top: 50px; }
+
+.main form .idcard {
+  width: 580px;
+  height: 80px;
+  position: relative;
+  margin-top: 15px; }
+
+.main form .idcard .card {
+  width: 100%;
+  height: 43px;
+  border: none;
+  font-size: 18px;
+  border-bottom: 1px solid #dddddd;
+  outline: none;
+  color: #1428a0; }
+
+.main form .idcard p {
+  position: absolute;
+  top: 3px;
+  left: 0;
+  color: #767676; }
+
+.main form .idcard label {
+  font-size: 14px;
+  color: #767676;
+  position: absolute;
+  top: 50px; }
+
+.main form .firstname .border1 {
+  border-bottom: 1px solid #1428a0; }
+
+.main form .name .border2 {
+  border-bottom: 1px solid #1428a0; }
+
+.main form .idcard .border3 {
+  border-bottom: 1px solid #1428a0; }
+
+.main form .firstname .border1_1 {
+  border-bottom: 1px solid #f00; }
+
+.main form .name .border2_1 {
+  border-bottom: 1px solid #f00; }
+
+.main form .idcard .border3_1 {
+  border-bottom: 1px solid #f00; }
+
+.main form .firstname .p1 {
+  color: #1428a0;
+  position: absolute;
+  top: -20px;
+  font-size: 14px; }
+
+.main form .name .p2 {
+  color: #1428a0;
+  position: absolute;
+  top: -20px;
+  font-size: 14px; }
+
+.main form .idcard .p3 {
+  color: #1428a0;
+  position: absolute;
+  top: -20px;
+  font-size: 14px; }
+
+.main form .firstname .p1_1 {
+  color: #f00; }
+
+.main form .name .p2_1 {
+  color: #f00; }
+
+.main form .idcard .p3_1 {
+  color: #f00; }
+
+.main form .firstname .p1_2 {
+  color: #767676; }
+
+.main form .name .p2_2 {
+  color: #767676; }
+
+.main form .idcard .p3_2 {
+  color: #767676; }
+
+.main form .firstname .label1_1 {
+  color: #f00; }
+
+.main form .name .label2_1 {
+  color: #f00; }
+
+.main form .idcard .label3_1 {
+  color: #f00; }
+
+.main form .firstname .input1 {
+  color: #000; }
+
+.main form .name .input2 {
+  color: #000; }
+
+.main form .idcard .input3 {
+  color: #000; }
+
+.main form .firstname .input1_1 {
+  color: #f00; }
+
+.main form .name .input2_1 {
+  color: #f00; }
+
+.main form .idcard .input3_1 {
+  color: #f00; }
+
+button {
+  width: 180px;
+  height: 50px;
+  background: #a0a8d8;
+  border-radius: 10px;
+  margin-top: 50px;
+  margin-bottom: 40px;
+  cursor: pointer; }
+
+button a {
+  color: #fff;
+  text-decoration: none; }
+
+.fangshi {
+  font-size: 16px; }
+
+.junren {
+  font-size: 16px; }
+
+footer {
+  width: 100%;
+  height: 46px;
+  background: #ebebeb; }
+
+.foot {
+  width: 702px;
+  height: 46px;
+  margin: 0 auto; }
+
+.foot ul li {
+  float: left;
+  margin-right: 20px; }
+
+.foot ul li a {
+  display: block;
+  font-size: 12px;
+  line-height: 46px;
+  text-decoration: none; }
+
+.foot p {
+  font-size: 12px;
+  color: #767676;
+  line-height: 46px; }

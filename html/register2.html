@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>register2</title>
+    <link rel="stylesheet" href="../style/register2.css">
+</head>
+<body>
+    
+    <div class="topWrap">
+        <div class="top">
+            <h3>三星账户</h3>
+            <div class="topmain">
+                <div class="main">
+                    <h4>身份证号</h4>
+                    <p>为了您正常享用三星会员俱乐部提供的服务，请输入准确的身份证信息</p>
+                    <form action="javascript:void(0)">
+                        <div class="firstname">
+                            <p>姓氏</p>
+                            <input type="text" id="usr" class="usr">
+                            <label for="usr">请输入您的姓氏</label>
+                        </div>
+                        <div class="name">
+                            <p>名字</p>
+                            <input type="text" id="user" class="user">
+                            <label for="user">请输入您的名字</label>
+                        </div>
+                        <div class="idcard">
+                            <p>身份证验证</p>
+                            <input type="text" id="card" class="card">
+                            <label for="card">您的身份证号码必须包含15到18个数字</label>
+                        </div>
+                    </form>
+                    <button><a href="#">验证</a></button>
+                    <p class="fangshi">其他注册方式</p>
+                    <a href="#" class="junren">军人证/护照验证</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="foot">
+            <ul class="left">
+                <li><a href="#">条款和条件</a></li>
+                <li><a href="#">三星隐私权政策</a></li>
+                <li><a href="#">联系我们</a></li>
+            </ul>
+            <p class="right">© Samsung Electronics Co., Ltd.</p>
+        </div>
+    </footer>
+
+
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+
+    <script>
+        $("form").find("label").hide();
+        $("#usr").focus(function(){
+            // console.log(this)
+            $(this).siblings("p").addClass("p1");
+            $(this).addClass("border1");
+        })
+        $("#user").focus(function(){
+            $(this).siblings("p").addClass("p2");
+            $(this).addClass("border2");
+        })
+        $("#card").focus(function(){
+            $(this).siblings("p").addClass("p3");
+            $(this).addClass("border3");
+        })
+        $("#usr").blur(function(){
+            // $(this).siblings("p").removeClass("p1")
+            $(this).removeClass("border1");
+            if($(this).val() != ""){
+                var reg = /^[\u4e00-\u9fa5]{2,}$/i;
+                if(reg.test($(this).val())){
+                    $(this).siblings("p").addClass("p1").addClass("p1_2");
+                    $(this).removeClass("border1_1").removeClass("input1_1").addClass("input1");
+                    $(this).siblings("label").hide();
+                }else{
+                    $(this).addClass("border1_1").addClass("input1_1");
+                    $(this).siblings("p").removeClass("p1_2").addClass("p1_1");
+                    $(this).siblings("label").show().addClass("label1_1");
+                }   
+            }else{
+                $(this).addClass("border1_1").addClass("input1_1");
+                $(this).siblings("p").removeClass("p1_2").addClass("p1_1");
+                $(this).siblings("label").show().addClass("label1_1");
+            }
+        })
+        $("#user").blur(function(){
+            // $(this).siblings("p").removeClass("p2")
+            $(this).removeClass("border2");
+            if($(this).val() != ""){
+                var reg = /^[\u4e00-\u9fa5]{2,}$/i;
+                if(reg.test($(this).val())){
+                    $(this).siblings("p").addClass("p2").addClass("p2_2");
+                    $(this).removeClass("border2_1").removeClass("input2_1").addClass("input2");
+                    $(this).siblings("label").hide();
+                }else{
+                    $(this).addClass("border2_1").addClass("input2_1");
+                    $(this).siblings("p").removeClass("p2_2").addClass("p2_1");
+                    $(this).siblings("label").show().addClass("label2_1");
+                }    
+            }else{
+                $(this).addClass("border2_1").addClass("input2_1");
+                $(this).siblings("p").removeClass("p2_2").addClass("p2_1");
+                $(this).siblings("label").show().addClass("label2_1");
+            }
+        })
+        $("#card").blur(function(){
+            // $(this).siblings("p").removeClass("p3")
+            $(this).removeClass("border3");
+            if($(this).val() != ""){
+                var reg = /^[1-9]\d{5}(18|19|20)\d{2}((0[1-9])|(1[0-2]))(([0-2][1-9])|10|20|30|31)\d{3}[0-9Xx]$/;
+                if(reg.test($(this).val())){
+                    $(this).siblings("p").addClass("p3").addClass("p3_2");
+                    $(this).removeClass("border3_1").removeClass("input3_1").addClass("input3");
+                    $(this).siblings("label").hide();
+                }else{
+                    $(this).addClass("border3_1").addClass("input3_1");
+                    $(this).siblings("p").removeClass("p3_2").addClass("p3_1");
+                    $(this).siblings("label").show().addClass("label3_1");
+                }   
+            }else{
+                $(this).addClass("border3_1").addClass("input3_1");
+                $(this).siblings("p").removeClass("p3_2").addClass("p3_1");
+                $(this).siblings("label").show().addClass("label3_1");
+            }
+        })
+
+    </script>
+</body>
+</html>

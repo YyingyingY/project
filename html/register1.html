@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>register1</title>
+    <link rel="stylesheet" href="../style/register1.css">
+</head>
+<body>
+    <div class="topWrap">
+        <div class="top">
+            <h3>三星账户</h3>
+            <div class="topLeft left">
+                <p>创建三星账户</p>
+                <b><a href="#">探索更多三星服务 &gt;</a></b>
+            </div>
+            <form>
+                <div class="topRight left">
+                    <p>点击以下链接并仔细阅读。通过勾选复选框，即表示您确认已阅读并同意以下条款：</p>
+                    <span><input type="checkbox" id="check">我同意全部条款。</span><br>
+                    <span><input type="checkbox"><a href="#">条款和条件</a>以及<a href="#">特殊条款。</a></span><br>
+                    <span><input type="checkbox">我同意<a href="#">三星隐私权政策</a></span><br>
+                    <span><input type="checkbox">启用<a href="#">个性化服务</a>。(可选)</span><br>
+                    <span><input type="checkbox"><a href="#">将个人信息提供给第三方</a>。(可选)</span><br>
+                    <button class="agree"><a href="../html/register2.html">同意</a></button>
+                    <button class="disagree"><a href="../html/login.html">拒绝</a></button>
+                </div>
+            </form>
+            
+        </div>
+    </div>
+    <footer>
+        <div class="foot">
+            <ul class="left">
+                <li><a href="#">条款和条件</a></li>
+                <li><a href="#">三星隐私权政策</a></li>
+                <li><a href="#">联系我们</a></li>
+            </ul>
+            <p class="right">© Samsung Electronics Co., Ltd.</p>
+        </div>
+    </footer>
+
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+        $("#check").on("click",function(){
+            // console.log(this.checked)
+            // console.log( $("form input").not("#check") );
+            $("form input").not("#check").prop("checked", this.checked)
+        })
+        
+
+    </script>
+</body>
+</html>
